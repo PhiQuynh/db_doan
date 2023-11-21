@@ -24,14 +24,15 @@ DROP TABLE IF EXISTS `masters`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `masters` (
   `master_id` bigint NOT NULL AUTO_INCREMENT,
-  `end_date` varchar(255) NOT NULL,
+  `end_date` varchar(255) DEFAULT NULL,
   `master_name` varchar(255) NOT NULL,
-  `start_date` varchar(255) NOT NULL,
+  `start_date` varchar(255) DEFAULT NULL,
+  `status_department` bigint DEFAULT NULL,
   `subject_id` bigint NOT NULL,
   PRIMARY KEY (`master_id`),
   KEY `FKkgrxa17dqgxbdh6honfffbt2q` (`subject_id`),
   CONSTRAINT `FKkgrxa17dqgxbdh6honfffbt2q` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +41,7 @@ CREATE TABLE `masters` (
 
 LOCK TABLES `masters` WRITE;
 /*!40000 ALTER TABLE `masters` DISABLE KEYS */;
-INSERT INTO `masters` VALUES (1,'2023-12-10','Đợt 1','2023-11-10',1),(2,'2023-12-10','Đợt 2','2023-6-10',1),(6,'2023-11-30','Đợt 6 năm  2023','2023-06-06',6),(7,'2023-11-30','Đợt 1  khoa Tin kinh tế','2023-06-06',4);
+INSERT INTO `masters` VALUES (1,'20-9-2023','Đợt 1 năm 2023','20-7-2023',NULL,1),(2,'2023-11-30','Đợt 2 năm 2023','2023-09-05',NULL,1);
 /*!40000 ALTER TABLE `masters` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-16 17:28:01
+-- Dump completed on 2023-11-21 11:41:22

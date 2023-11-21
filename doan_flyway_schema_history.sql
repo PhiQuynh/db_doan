@@ -16,29 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `subjects_user`
+-- Table structure for table `flyway_schema_history`
 --
 
-DROP TABLE IF EXISTS `subjects_user`;
+DROP TABLE IF EXISTS `flyway_schema_history`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `subjects_user` (
-  `subject_subject_id` bigint NOT NULL,
-  `user_user_id` bigint NOT NULL,
-  UNIQUE KEY `UK_em99y2mo5hb85tomasbmss9nc` (`user_user_id`),
-  KEY `FKjhexdk5cwxwmb3gw1ibonboqu` (`subject_subject_id`),
-  CONSTRAINT `FKglldmt8nfnpkeb81np6tky134` FOREIGN KEY (`user_user_id`) REFERENCES `users` (`user_id`),
-  CONSTRAINT `FKjhexdk5cwxwmb3gw1ibonboqu` FOREIGN KEY (`subject_subject_id`) REFERENCES `subjects` (`subject_id`)
+CREATE TABLE `flyway_schema_history` (
+  `installed_rank` int NOT NULL,
+  `version` varchar(50) DEFAULT NULL,
+  `description` varchar(200) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `script` varchar(1000) NOT NULL,
+  `checksum` int DEFAULT NULL,
+  `installed_by` varchar(100) NOT NULL,
+  `installed_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `execution_time` int NOT NULL,
+  `success` tinyint(1) NOT NULL,
+  PRIMARY KEY (`installed_rank`),
+  KEY `flyway_schema_history_s_idx` (`success`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `subjects_user`
+-- Dumping data for table `flyway_schema_history`
 --
 
-LOCK TABLES `subjects_user` WRITE;
-/*!40000 ALTER TABLE `subjects_user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `subjects_user` ENABLE KEYS */;
+LOCK TABLES `flyway_schema_history` WRITE;
+/*!40000 ALTER TABLE `flyway_schema_history` DISABLE KEYS */;
+/*!40000 ALTER TABLE `flyway_schema_history` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-16 17:28:02
+-- Dump completed on 2023-11-21 11:41:23

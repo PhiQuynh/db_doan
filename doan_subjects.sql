@@ -26,10 +26,13 @@ CREATE TABLE `subjects` (
   `subject_id` bigint NOT NULL AUTO_INCREMENT,
   `subject_name` varchar(255) NOT NULL,
   `department_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   PRIMARY KEY (`subject_id`),
   KEY `FKgh0j5ejuox2kr2av0l8158c0a` (`department_id`),
-  CONSTRAINT `FKgh0j5ejuox2kr2av0l8158c0a` FOREIGN KEY (`department_id`) REFERENCES `departments` (`department_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `FKm9k2q12kousqip4g5spqrm2am` (`user_id`),
+  CONSTRAINT `FKgh0j5ejuox2kr2av0l8158c0a` FOREIGN KEY (`department_id`) REFERENCES `departments` (`department_id`),
+  CONSTRAINT `FKm9k2q12kousqip4g5spqrm2am` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +41,7 @@ CREATE TABLE `subjects` (
 
 LOCK TABLES `subjects` WRITE;
 /*!40000 ALTER TABLE `subjects` DISABLE KEYS */;
-INSERT INTO `subjects` VALUES (1,'Khoa học máy tính',1),(2,'Mạng máy tính',1),(3,'Tin kinh tế',1),(4,'Tin địa học',1),(5,'Hệ thống thông tin',1),(6,'Công nghệ phần mềm',1);
+INSERT INTO `subjects` VALUES (1,'Khoa học máy tính',1,1);
 /*!40000 ALTER TABLE `subjects` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-16 17:28:03
+-- Dump completed on 2023-11-21 11:41:23

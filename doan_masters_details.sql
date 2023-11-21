@@ -24,26 +24,25 @@ DROP TABLE IF EXISTS `masters_details`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `masters_details` (
   `master_detail_id` bigint NOT NULL AUTO_INCREMENT,
-  `mssv` bigint DEFAULT NULL,
+  `mssv` bigint NOT NULL,
   `score_argument` double DEFAULT NULL,
   `score_coucil` double DEFAULT NULL,
-  `status_department` bigint DEFAULT NULL,
   `status_teacher` bigint DEFAULT NULL,
-  `student_class` varchar(255) DEFAULT NULL,
-  `student_name` varchar(255) DEFAULT NULL,
-  `title_name_en` varchar(255) DEFAULT NULL,
-  `title_name_vn` varchar(255) DEFAULT NULL,
-  `master_id` bigint DEFAULT NULL,
-  `teacher_hd_id` bigint DEFAULT NULL,
+  `student_class` varchar(255) NOT NULL,
+  `student_name` varchar(255) NOT NULL,
+  `title_name_en` varchar(255) NOT NULL,
+  `title_name_vn` varchar(255) NOT NULL,
+  `coucil_id` bigint DEFAULT NULL,
+  `master_id` bigint NOT NULL,
   `teacher_pb_id` bigint DEFAULT NULL,
   PRIMARY KEY (`master_detail_id`),
+  KEY `FK1jjwn5xxvu2p691hnydx8rv4k` (`coucil_id`),
   KEY `FKesm3go1uistxlte79bcgmrojt` (`master_id`),
-  KEY `FK1q8sgbtf75gutjvj1omcg7fls` (`teacher_hd_id`),
   KEY `FKn3h54ew08tpbyi2ormpduicev` (`teacher_pb_id`),
-  CONSTRAINT `FK1q8sgbtf75gutjvj1omcg7fls` FOREIGN KEY (`teacher_hd_id`) REFERENCES `teachers` (`teacher_id`),
+  CONSTRAINT `FK1jjwn5xxvu2p691hnydx8rv4k` FOREIGN KEY (`coucil_id`) REFERENCES `coucils` (`coucil_id`),
   CONSTRAINT `FKesm3go1uistxlte79bcgmrojt` FOREIGN KEY (`master_id`) REFERENCES `masters` (`master_id`),
   CONSTRAINT `FKn3h54ew08tpbyi2ormpduicev` FOREIGN KEY (`teacher_pb_id`) REFERENCES `teachers` (`teacher_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -52,7 +51,7 @@ CREATE TABLE `masters_details` (
 
 LOCK TABLES `masters_details` WRITE;
 /*!40000 ALTER TABLE `masters_details` DISABLE KEYS */;
-INSERT INTO `masters_details` VALUES (1,1921050503,5,NULL,NULL,NULL,'DCCTKH64B','Nguyễn Văn A','Analysis and design of sales website system','Phân tích thiết kế hệ thống website bán hàng',1,1,5),(2,1921050503,9,4,NULL,NULL,'DCCTKH64B','Nguyễn Văn B','Analysis and design of sales website system','Phân tích thiết kế hệ thống website bán hàng',1,1,NULL),(3,1921050503,4,NULL,NULL,NULL,'DCCTKH64B','Nguyễn Văn C','Analysis and design of sales website system','Phân tích thiết kế hệ thống website bán hàng',1,1,NULL),(4,1921050503,7,7,NULL,NULL,'DCCTKH64B','Nguyễn Văn D','DCCTKH64B','DCCTKH64B',1,1,NULL),(5,1921050503,5,4,NULL,NULL,'DCCTKH64B','Nguyễn Văn D','DCCTKH64B','DCCTKH64B',1,5,NULL),(6,1921050503,NULL,NULL,NULL,NULL,'DCCTKH64B','Nguyễn Văn D','DCCTKH64B','DCCTKH64B',1,5,NULL),(7,1921050503,6,8,NULL,NULL,'DCCTKH64A','Nguyễn Văn D','code spring booot','code spring booot',1,2,NULL),(11,1921050503,6,8,NULL,NULL,'DCCTKH64A','Phí Quỳnh','DCCTKH64A','DCCTKH64B',2,5,5);
+INSERT INTO `masters_details` VALUES (1,1921050503,7,4,NULL,'DCCTKH64B','Phí Quỳnh','Lập trình web','Lập trình web',1,1,2),(2,1921050503,7,4,NULL,'DCCTKH64B','Phí Quỳnh','Lập trình web','Lập trình web',NULL,1,2),(3,1921050503,7,NULL,NULL,'DCCTKH64B','Nguyễn Văn D','Lập trình back-end','Lập trình back-end',NULL,2,2),(4,1921050503,NULL,NULL,NULL,'DCCTKH64B','Nguyễn Văn D','Lập trình back-end','Lập trình back-end',1,2,1);
 /*!40000 ALTER TABLE `masters_details` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -65,4 +64,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-16 17:28:02
+-- Dump completed on 2023-11-21 11:41:21

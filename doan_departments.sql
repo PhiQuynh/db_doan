@@ -25,7 +25,10 @@ DROP TABLE IF EXISTS `departments`;
 CREATE TABLE `departments` (
   `department_id` bigint NOT NULL AUTO_INCREMENT,
   `department_name` varchar(255) NOT NULL,
-  PRIMARY KEY (`department_id`)
+  `user_id` bigint NOT NULL,
+  PRIMARY KEY (`department_id`),
+  KEY `FKounkqrfjtcgha7kjt1ve42fcf` (`user_id`),
+  CONSTRAINT `FKounkqrfjtcgha7kjt1ve42fcf` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -35,7 +38,7 @@ CREATE TABLE `departments` (
 
 LOCK TABLES `departments` WRITE;
 /*!40000 ALTER TABLE `departments` DISABLE KEYS */;
-INSERT INTO `departments` VALUES (1,'Công nghệ thông tin');
+INSERT INTO `departments` VALUES (1,'Công nghệ thông tin',1);
 /*!40000 ALTER TABLE `departments` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-16 17:28:02
+-- Dump completed on 2023-11-21 11:41:21

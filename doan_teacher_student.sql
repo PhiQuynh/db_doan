@@ -16,29 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `users_name_file`
+-- Table structure for table `teacher_student`
 --
 
-DROP TABLE IF EXISTS `users_name_file`;
+DROP TABLE IF EXISTS `teacher_student`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `users_name_file` (
-  `user_user_id` bigint NOT NULL,
-  `name_file_id_file` bigint NOT NULL,
-  UNIQUE KEY `UK_t0mc7cj42ykcedlss01imf2ry` (`name_file_id_file`),
-  KEY `FKa0d9uj0hda3glyq4qi23c9s59` (`user_user_id`),
-  CONSTRAINT `FKa0d9uj0hda3glyq4qi23c9s59` FOREIGN KEY (`user_user_id`) REFERENCES `users` (`user_id`),
-  CONSTRAINT `FKkla0x23ssm4s00k0no7j3txdq` FOREIGN KEY (`name_file_id_file`) REFERENCES `file` (`id_file`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `teacher_student` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `status` varchar(255) DEFAULT NULL,
+  `master_detail_id` bigint NOT NULL,
+  `teacher_id` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKhnkj2d9hqb151pweqm677d9i` (`master_detail_id`),
+  KEY `FK90r6ib6fn42cemkd03dnbx15d` (`teacher_id`),
+  CONSTRAINT `FK90r6ib6fn42cemkd03dnbx15d` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`teacher_id`),
+  CONSTRAINT `FKhnkj2d9hqb151pweqm677d9i` FOREIGN KEY (`master_detail_id`) REFERENCES `masters_details` (`master_detail_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `users_name_file`
+-- Dumping data for table `teacher_student`
 --
 
-LOCK TABLES `users_name_file` WRITE;
-/*!40000 ALTER TABLE `users_name_file` DISABLE KEYS */;
-/*!40000 ALTER TABLE `users_name_file` ENABLE KEYS */;
+LOCK TABLES `teacher_student` WRITE;
+/*!40000 ALTER TABLE `teacher_student` DISABLE KEYS */;
+INSERT INTO `teacher_student` VALUES (1,'ACCEPTED',1,1),(2,'ACCEPTED',2,1),(3,'ACCEPTED',3,1),(6,'PENDING',4,2);
+/*!40000 ALTER TABLE `teacher_student` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-16 17:28:02
+-- Dump completed on 2023-11-21 11:41:21

@@ -27,7 +27,7 @@ CREATE TABLE `file` (
   `name` varchar(255) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_file`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `file` (
 
 LOCK TABLES `file` WRITE;
 /*!40000 ALTER TABLE `file` DISABLE KEYS */;
-INSERT INTO `file` VALUES (3,'test file.xlsx','files/test file.xlsx'),(4,'report.xlsx','files/report.xlsx'),(5,'Seasonal photo calendar1.xlsx','files/Seasonal photo calendar1.xlsx'),(6,'Premium weekly chore schedule1.xlsx','files/Premium weekly chore schedule1.xlsx'),(7,'Book2.xlsx','files/Book2.xlsx'),(8,'Seasonal photo calendar1 (2).xlsx','files/Seasonal photo calendar1 (2).xlsx'),(9,'4ba9cc2d-b2a6-4986-a421-91c6255b3c92.xlsx','files/4ba9cc2d-b2a6-4986-a421-91c6255b3c92.xlsx'),(10,'4ba9cc2d-b2a6-4986-a421-91c6255b3c92.xlsx','files/4ba9cc2d-b2a6-4986-a421-91c6255b3c92.xlsx'),(11,'4ba9cc2d-b2a6-4986-a421-91c6255b3c92.xlsx','files/4ba9cc2d-b2a6-4986-a421-91c6255b3c92.xlsx'),(12,'Sales invoice tracker1.xlsx','files/Sales invoice tracker1.xlsx'),(13,'Sales invoice tracker1.xlsx','files/Sales invoice tracker1.xlsx'),(14,'report (4).xlsx','files/report (4).xlsx'),(15,'report (1).xlsx','files/report (1).xlsx');
+INSERT INTO `file` VALUES (1,'4ba9cc2d-b2a6-4986-a421-91c6255b3c92 (1).xlsx','files/4ba9cc2d-b2a6-4986-a421-91c6255b3c92 (1).xlsx'),(2,'4ba9cc2d-b2a6-4986-a421-91c6255b3c92 (1).xlsx','files/4ba9cc2d-b2a6-4986-a421-91c6255b3c92 (1).xlsx'),(3,'report (4).xlsx','files/report (4).xlsx'),(4,'report (4).xlsx','uploads/report (4).xlsx'),(5,'report (4).xlsx','uploads/report (4).xlsx'),(6,'report (4).xlsx','uploads/report (4).xlsx'),(7,'report (4).xlsx','uploads/report (4).xlsx'),(8,'4ba9cc2d-b2a6-4986-a421-91c6255b3c92 (1).xlsx','uploads/4ba9cc2d-b2a6-4986-a421-91c6255b3c92 (1).xlsx'),(9,'Seasonal photo calendar1 (2).xlsx','uploads/Seasonal photo calendar1 (2).xlsx'),(10,'Premium weekly chore schedule1.xlsx','uploads/Premium weekly chore schedule1.xlsx'),(11,'Seasonal photo calendar1 (2).xlsx','uploads/Seasonal photo calendar1 (2).xlsx'),(12,'Seasonal photo calendar1 (2).xlsx','uploads/Seasonal photo calendar1 (2).xlsx');
 /*!40000 ALTER TABLE `file` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-16 17:28:04
+-- Dump completed on 2023-11-21 11:41:23

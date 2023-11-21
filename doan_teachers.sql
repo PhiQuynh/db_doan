@@ -25,17 +25,21 @@ DROP TABLE IF EXISTS `teachers`;
 CREATE TABLE `teachers` (
   `teacher_id` bigint NOT NULL AUTO_INCREMENT,
   `email` varchar(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `max_students_hd` int DEFAULT NULL,
+  `max_students_pb` int DEFAULT NULL,
   `phone` varchar(255) NOT NULL,
   `research_direction` varchar(255) DEFAULT NULL,
+  `sex` varchar(255) NOT NULL,
   `teacher_name` varchar(255) NOT NULL,
   `subject_id` bigint NOT NULL,
   `user_id` bigint NOT NULL,
   PRIMARY KEY (`teacher_id`),
-  UNIQUE KEY `UK_cd1k6xwg9jqtiwx9ybnxpmoh9` (`user_id`),
   KEY `FKsahkj7ew9hfs6byrpl75br5lx` (`subject_id`),
+  KEY `FKb8dct7w2j1vl1r2bpstw5isc0` (`user_id`),
   CONSTRAINT `FKb8dct7w2j1vl1r2bpstw5isc0` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
   CONSTRAINT `FKsahkj7ew9hfs6byrpl75br5lx` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +48,7 @@ CREATE TABLE `teachers` (
 
 LOCK TABLES `teachers` WRITE;
 /*!40000 ALTER TABLE `teachers` DISABLE KEYS */;
-INSERT INTO `teachers` VALUES (1,'phiquynh@humg.edu.vn','0865744085','Làm về lập trình web','Phí Quỳnh',1,1),(2,'nguyenthithuyduong@humg.edu.vn','984984309834',NULL,'Nguyễn Thị Thùy Dương',1,2),(5,'nguyenthiphuongbac@humg.edu.vn','984984309834',NULL,'Nguyễn Thị Phương Bắc',1,4),(6,'lehonganh@gmail.com','0865744085','Là giảng viên của bộ môn mạng máy tính, chuyên vế cấu hình web, devOps...','Lê Hồng Anh',1,8),(7,'dangquoctrung@gmail.com','0865744085','Là giảng viên của bộ môn mạng máy tính, chuyên vế cấu hình web, devOps...','dangquoctrung',2,13),(8,'nguyenthihaiyen@humg.edu.vn','0865744085','Là giảng viên của bộ môn mạng máy tính, chuyên vế cấu hình web, devOps...','lehonganh',1,15);
+INSERT INTO `teachers` VALUES (1,'nguyenthithuyduong@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','female','Nguyễn Thị Thùy Dương',1,2),(2,'nongthioanh@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','female','Nông Thị Oanh',1,3);
 /*!40000 ALTER TABLE `teachers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-16 17:28:03
+-- Dump completed on 2023-11-21 11:41:22
