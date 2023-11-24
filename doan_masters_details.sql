@@ -35,14 +35,18 @@ CREATE TABLE `masters_details` (
   `coucil_id` bigint DEFAULT NULL,
   `master_id` bigint NOT NULL,
   `teacher_pb_id` bigint DEFAULT NULL,
+  `teacher_hd_id` bigint DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`master_detail_id`),
   KEY `FK1jjwn5xxvu2p691hnydx8rv4k` (`coucil_id`),
   KEY `FKesm3go1uistxlte79bcgmrojt` (`master_id`),
   KEY `FKn3h54ew08tpbyi2ormpduicev` (`teacher_pb_id`),
+  KEY `FK1q8sgbtf75gutjvj1omcg7fls` (`teacher_hd_id`),
   CONSTRAINT `FK1jjwn5xxvu2p691hnydx8rv4k` FOREIGN KEY (`coucil_id`) REFERENCES `coucils` (`coucil_id`),
+  CONSTRAINT `FK1q8sgbtf75gutjvj1omcg7fls` FOREIGN KEY (`teacher_hd_id`) REFERENCES `teachers` (`teacher_id`),
   CONSTRAINT `FKesm3go1uistxlte79bcgmrojt` FOREIGN KEY (`master_id`) REFERENCES `masters` (`master_id`),
   CONSTRAINT `FKn3h54ew08tpbyi2ormpduicev` FOREIGN KEY (`teacher_pb_id`) REFERENCES `teachers` (`teacher_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -51,7 +55,7 @@ CREATE TABLE `masters_details` (
 
 LOCK TABLES `masters_details` WRITE;
 /*!40000 ALTER TABLE `masters_details` DISABLE KEYS */;
-INSERT INTO `masters_details` VALUES (1,1921050503,7,4,NULL,'DCCTKH64B','Phí Quỳnh','Lập trình web','Lập trình web',1,1,2),(2,1921050503,7,4,NULL,'DCCTKH64B','Phí Quỳnh','Lập trình web','Lập trình web',NULL,1,2),(3,1921050503,7,NULL,NULL,'DCCTKH64B','Nguyễn Văn D','Lập trình back-end','Lập trình back-end',NULL,2,2),(4,1921050503,NULL,NULL,NULL,'DCCTKH64B','Nguyễn Văn D','Lập trình back-end','Lập trình back-end',1,2,1);
+INSERT INTO `masters_details` VALUES (1,1921050503,7,4,NULL,'DCCTKH64B','Phí Quỳnh','Lập trình web','Lập trình web',1,1,2,2,'ACCEPTED'),(2,1921050503,7,4,NULL,'DCCTKH64B','Phí Quỳnh','Lập trình web','Lập trình web',NULL,1,2,2,'ACCEPTED'),(3,1921050503,7,9,NULL,'DCCTKH64B','Nguyễn Văn D','Lập trình back-end','Lập trình back-end',3,2,1,1,'ACCEPTED'),(4,1921050503,NULL,NULL,NULL,'DCCTKH64B','Nguyễn Văn D','Lập trình back-end','Lập trình back-end',1,2,2,1,'ACCEPTED'),(5,1921050503,NULL,NULL,NULL,'DCCTKH64B','Phí Thị Quỳnh','Building a website to support project management Graduation from the Faculty of Information Technology: Functional module Departments and Lecturers','Xây dựng website hỗ trợ quản lí đồ án tốt nghiệp khoa công nghệ thông tin : Phân hệ chức năng Bộ môn và Giảng viên',NULL,2,2,1,'ACCEPTED'),(6,1921050503,NULL,NULL,NULL,'DCCTKH64A','Nguyễn Văn A','Lập trình angularjs','Lập trình angularjs',NULL,1,NULL,2,'ACCEPTED'),(7,1921050503,NULL,NULL,NULL,'DCCTKH64B','Nguyễn Văn Đức','Building a website to support graduation project management of the Faculty of Information Technology: Faculty and Admin functional subsystem','Xây dựng website hỗ trợ quản lí đồ án tốt nghiệp khoa công nghệ thông tin : Phân hệ chức năng Khoa và Admin',NULL,3,NULL,2,'PENDING');
 /*!40000 ALTER TABLE `masters_details` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -64,4 +68,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-21 11:41:21
+-- Dump completed on 2023-11-24 17:33:37

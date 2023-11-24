@@ -32,7 +32,7 @@ CREATE TABLE `masters` (
   PRIMARY KEY (`master_id`),
   KEY `FKkgrxa17dqgxbdh6honfffbt2q` (`subject_id`),
   CONSTRAINT `FKkgrxa17dqgxbdh6honfffbt2q` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `masters` (
 
 LOCK TABLES `masters` WRITE;
 /*!40000 ALTER TABLE `masters` DISABLE KEYS */;
-INSERT INTO `masters` VALUES (1,'20-9-2023','Đợt 1 năm 2023','20-7-2023',NULL,1),(2,'2023-11-30','Đợt 2 năm 2023','2023-09-05',NULL,1);
+INSERT INTO `masters` VALUES (1,'2023-09-30','Đợt 1 năm 2023','2023-07-04',NULL,1),(2,'2023-11-30','Đợt 2 năm 2023','2023-09-05',NULL,1),(3,'2023-12-15','Đợt 3 năm 2023','2023-11-10',NULL,1),(4,'2023-11-29','Đợt 4 năm 2023','2023-11-01',NULL,1);
 /*!40000 ALTER TABLE `masters` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-21 11:41:22
+-- Dump completed on 2023-11-24 17:33:37

@@ -30,7 +30,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`user_id`),
   KEY `FKp56c1712k691lhsyewcssf40f` (`role_id`),
   CONSTRAINT `FKp56c1712k691lhsyewcssf40f` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'$2a$10$qlANP82KJYRpOX/H.RFr9.Rw8PNgqSY9qg3W0d6usUQHjkg1jI/Iu','khoahocmaytinh',2),(2,'$2a$10$DuiZgPoMcu3P2k/mz.I19OhScZkKZ6wfJ983Smf.9enu2PxIp7tGG','nguyenthithuyduong',1),(3,'$2a$10$eHllrbwU/XyQ7jPravt6MerhuYifBI.BX.HWYupPWEDUR14AMwauC','nongthioanh',1),(4,'$2a$10$WYuMrYYdBmrzZckP5GcYKOD9ouhuz9bQwCYBIa9JnhGNTL2jEkF.2','nguyenduyhuy',1),(5,'$2a$10$8dtxr0SDnG1kO7/C8fHC0uGSzrdZ1Ig9sUKovzFkXe47rQxDypt2C','dangvannam',1),(6,'$2a$10$hFWh1KDRkB5mdJhYES565uqDmxRwoZGY/FYPIFFwrMXskxdpoRYYq','nguyenthiphuongbac',1),(7,'$2a$10$O3yZsnGSMQk6yTlyJg2U/OoX2WGnGOXFEKK.h.9lBzSnaoQ.g3dqu','lehonganh',1);
+INSERT INTO `users` VALUES (1,'$2a$10$qlANP82KJYRpOX/H.RFr9.Rw8PNgqSY9qg3W0d6usUQHjkg1jI/Iu','khoahocmaytinh',2),(2,'$2a$10$DuiZgPoMcu3P2k/mz.I19OhScZkKZ6wfJ983Smf.9enu2PxIp7tGG','nguyenthithuyduong',1),(3,'$2a$10$eHllrbwU/XyQ7jPravt6MerhuYifBI.BX.HWYupPWEDUR14AMwauC','nongthioanh',1),(4,'$2a$10$WYuMrYYdBmrzZckP5GcYKOD9ouhuz9bQwCYBIa9JnhGNTL2jEkF.2','nguyenduyhuy',1),(5,'$2a$10$8dtxr0SDnG1kO7/C8fHC0uGSzrdZ1Ig9sUKovzFkXe47rQxDypt2C','dangvannam',1),(6,'$2a$10$hFWh1KDRkB5mdJhYES565uqDmxRwoZGY/FYPIFFwrMXskxdpoRYYq','nguyenthiphuongbac',1),(7,'$2a$10$O3yZsnGSMQk6yTlyJg2U/OoX2WGnGOXFEKK.h.9lBzSnaoQ.g3dqu','lehonganh',1),(8,'$2a$10$GcPW2svP7qSnlgZUP54OJOtTYCMf/QNdlAtjYyxPKM682kFa3yF2.','aaaaaa',1),(9,'$2a$10$Cw6RU2MFmaOnNWesWw.IJuUH1IDsSi35h3LCe9uqeVzMgfrbnTOmG','test test',1),(10,'$2a$10$/m1Vj6aaSIWQtE/4q6kzROYJYgVigKFRQ29JcTBdxoE3PJAg3Xbma','test',1),(11,'$2a$10$ckcRywcjN3gPalphaBMsmO1LihYcsSWifv7gFBolBbYtQbRrw1zPa','bbbbbbbb',1),(12,'$2a$10$F9U6QO2HpZzqlnvDgjdKve0QbsHzkuyOAB1VZITtHU/p9K5N.fDA.','lehonganh1',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-21 11:41:23
+-- Dump completed on 2023-11-24 17:33:37

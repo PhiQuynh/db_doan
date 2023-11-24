@@ -31,7 +31,7 @@ CREATE TABLE `teachers_couclis` (
   KEY `FKnw5iwhhk7u5scld398s4v7yxb` (`teacher_id`),
   CONSTRAINT `FKnw5iwhhk7u5scld398s4v7yxb` FOREIGN KEY (`teacher_id`) REFERENCES `teachers` (`teacher_id`),
   CONSTRAINT `FKsvwxdcixku7cc0knl3y7sdbv` FOREIGN KEY (`couclis_id`) REFERENCES `coucils` (`coucil_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `teachers_couclis` (
 
 LOCK TABLES `teachers_couclis` WRITE;
 /*!40000 ALTER TABLE `teachers_couclis` DISABLE KEYS */;
+INSERT INTO `teachers_couclis` VALUES (1,1,1),(2,1,2),(3,1,3),(4,2,1),(5,3,1),(6,2,4),(7,3,2);
 /*!40000 ALTER TABLE `teachers_couclis` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-21 11:41:22
+-- Dump completed on 2023-11-24 17:33:36
