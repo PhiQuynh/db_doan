@@ -39,7 +39,7 @@ CREATE TABLE `teachers` (
   KEY `FKb8dct7w2j1vl1r2bpstw5isc0` (`user_id`),
   CONSTRAINT `FKb8dct7w2j1vl1r2bpstw5isc0` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
   CONSTRAINT `FKsahkj7ew9hfs6byrpl75br5lx` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,7 @@ CREATE TABLE `teachers` (
 
 LOCK TABLES `teachers` WRITE;
 /*!40000 ALTER TABLE `teachers` DISABLE KEYS */;
-INSERT INTO `teachers` VALUES (1,'nguyenthithuyduong@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','female','Nguyễn Thị Thùy Dương',1,2),(2,'nongthioanh@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','female','Nông Thị Oanh',1,3),(3,'nguyenduyhuy@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình java, web, dữ liệu lớn ...','male','Nguyễn Duy Huy',1,4),(4,'dangvannam@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','male','Đặng Văn Nam',1,5),(5,'nguyenthiphuongbac@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','female','Nguyễn Thị Phương Bắc',1,6),(6,'lehonganh@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','male','Lê Hồng Anh',1,7);
+INSERT INTO `teachers` VALUES (1,'nguyenthithuyduong@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','female','Nguyễn Thị Thùy Dương',1,2),(2,'nongthioanh@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','female','Nông Thị Oanh',1,3),(3,'nguyenduyhuy@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình java, web, dữ liệu lớn ...','male','Nguyễn Duy Huy',1,4),(4,'dangvannam@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','male','Đặng Văn Nam',1,5),(5,'nguyenthiphuongbac@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','female','Nguyễn Thị Phương Bắc',1,6),(6,'lehonganh@humg.edu.vn',NULL,NULL,NULL,'0865744085','Là giảng viên của bộ môn Khoa học máy tính chuyên về lập trình web, dữ liệu lớn ...','male','Lê Hồng Anh',1,7),(7,'gdfgdfgdgdfdfgdfg',NULL,NULL,NULL,'gdfgdfgdgdfdfgdfg','gdfgdfgdgdfdfgdfg','gdfgdfgdgdfdfgdfg','gdfgdfgdgdfdfgdfg',1,23),(8,'etwteywey45tet',NULL,NULL,NULL,'etwteywey45tet','etwteywey45tet','etwteywey45tet','etwteywey45tet',1,24);
 /*!40000 ALTER TABLE `teachers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -61,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-24 17:33:35
+-- Dump completed on 2023-11-27 17:33:00
